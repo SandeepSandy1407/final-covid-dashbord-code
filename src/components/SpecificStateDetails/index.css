@@ -1,0 +1,211 @@
+.main-container1 {
+  background-color: #161625;
+  padding-left: 10vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-right: 10vw;
+}
+.top-container {
+  display: flex;
+  width: 80vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.state-name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.state-name {
+  width: Fixed (312px);
+  height: Fixed (64px);
+  top: 144px;
+  left: 150px;
+  color: #0284c7;
+  padding: 10.541176795959473px 21.082353591918945px 10.541176795959473px
+    21.082353591918945px;
+  border-radius: 32px;
+  background-color: #0284c729;
+  text-align: center;
+}
+.latest-update-text {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #cbd5e1;
+}
+.tested-text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #94a3b8;
+  text-align: right;
+}
+.test-count {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #94a3b8;
+  text-align: right;
+}
+.select-case-card {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.district-container {
+  list-style-type: none;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.district-list-container {
+  color: #94a3b8;
+  width: 18vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+}
+.district-count {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 7vw;
+  text-align: left;
+}
+.district-name {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+  text-align: left;
+  width: 7vw;
+}
+.bar-graph-container {
+  width: 80vw;
+  height: 431px;
+  color: #9a0e31;
+}
+.each-bar-className {
+  color: #9a0e31;
+  width: 40px;
+  border-radius: 8px 8px 0px 0px;
+}
+.line-App-active {
+  background-color: #132240;
+  margin-top: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 80vw;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+.line-App-confirmed {
+  background-color: #331427;
+  margin-top: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 80vw;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+.line-App-recovered {
+  background-color: #182829;
+  margin-top: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 80vw;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+.line-App-tested {
+  background-color: #230f41;
+  margin-top: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 80vw;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+.line-App-deceased {
+  background-color: #1c1c2b;
+  margin-top: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 80vw;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+.daily-spread-head {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #cbd5e1;
+  padding: 10px;
+  margin: 10px;
+}
+
+.page-not-found-main-container1 {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #161625;
+}
+.page-not-found-heading {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+.page-not-found-element-button {
+  width: Hug (88px);
+  height: Hug (48px);
+  padding: 12px 24px 12px 24px;
+  border-radius: 12px;
+  gap: 8px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.page-not-found-element-paragraph1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #94a3b8;
+}

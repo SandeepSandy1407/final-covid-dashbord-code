@@ -1,0 +1,62 @@
+.list-items-container {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  margin-left: 0px;
+}
+
+.list-state-name {
+  color: #f1f5f9;
+  text-decoration: none;
+  width: 20vw;
+  align-self: center;
+}
+
+.list-confirmed {
+  color: #ff073a;
+  text-decoration: none;
+  width: 10vw;
+  text-align: right;
+  align-self: center;
+}
+
+.list-active {
+  color: #007bff;
+  text-decoration: none;
+  width: 10vw;
+  text-align: right;
+  align-self: center;
+}
+
+.list-recovered {
+  color: #28a745;
+  text-decoration: none;
+  width: 10vw;
+  text-align: right;
+  align-self: center;
+}
+
+.list-deceased {
+  color: #6c757d;
+  text-decoration: none;
+  width: 10vw;
+  text-align: right;
+  align-self: center;
+}
+
+.list-population {
+  color: #94a3b8;
+  text-decoration: none;
+  width: 10vw;
+  text-align: right;
+  align-self: center;
+}

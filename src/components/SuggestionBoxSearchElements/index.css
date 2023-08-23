@@ -1,0 +1,45 @@
+.list-items-container1 {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  border-bottom: #64748b solid 1px;
+}
+.state-name1 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #64748b;
+}
+.suggestion-list-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #1cd4d429;
+  height: 3vh;
+  border-width: 0px;
+  border-radius: 3px;
+  font-family: 'HK Grotesk';
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  color: #facc15;
+  margin: 5px;
+}
+.suggestion-stateCode1 {
+  font-family: 'HK Grotesk';
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  color: #facc15;
+  padding-bottom: 1000px;
+  align-self: flex-start;
+}
+.suggestion-icon1 {
+  color: #facc15;
+  margin-top: 2px;
+  margin-left: 5px;
+}

@@ -1,0 +1,113 @@
+.confirmedTheme {
+  background-color: #331427;
+  width: 15vw;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.activeTheme {
+  background-color: #132240;
+  width: 15vw;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.recoveredTheme {
+  background-color: #182829;
+  width: 15vw;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.deceasedTheme {
+  background-color: #212230;
+  width: 15vw;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.confirmedText {
+  color: #ff073a;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.activeText {
+  color: #007bff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.recoveredText {
+  color: #28a745;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.deceasedText {
+  color: #6c757d;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.activeCount {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #007bff;
+}
+.recoveredCount {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #28a745;
+}
+.confirmedCount {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ff073a;
+}
+.deceasedCount {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #6c757d;
+}
+.tabButton {
+  background-color: transparent;
+  border: 0px;
+}
+.normal-background-theme {
+  background-color: #161625;
+  width: 15vw;
+  text-align: center;
+  border-radius: 12px;
+}
