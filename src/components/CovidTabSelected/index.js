@@ -67,11 +67,27 @@ const CovidTabSelected = props => {
   const finalCount = returnCount()
   const finalText = returnBackgroundText()
   const finaltabCount = returnTabCount()
+  let altText = ''
+  let testIdName = ''
+  if (tab === 'confirmed') {
+    altText = 'state specific confirmed cases pic'
+    testIdName = 'stateSpecificConfirmedCasesContainer'
+  } else if (tab === 'recovered') {
+    altText = 'state specific recovered cases pic'
+    testIdName = 'stateSpecificRecoveredCasesContainer'
+  } else if (tab === 'active') {
+    altText = 'state specific active cases pic'
+    testIdName = 'stateSpecificActiveCasesContainer'
+  } else if (tab === 'deceased') {
+    altText = 'state specific deceased cases pic'
+    testIdName = 'stateSpecificDeceasedCasesContainer'
+  }
+
   return (
     <li className={backgroundTheme}>
       <button type="button" onClick={changeSelectedTab} className="tabButton">
         <p className={finalText}>{tab}</p>
-        <img src={imgUrl} />
+        <img src={imgUrl} alt={altText} />
         <p className={finaltabCount}>{finalCount}</p>
       </button>
     </li>

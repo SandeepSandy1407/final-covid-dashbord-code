@@ -1,88 +1,196 @@
-.list-container-element {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 70vw;
-  text-align: center;
+@media (min-width: 769px) {
+  .list-container-element {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    text-align: center;
+  }
+  .mobile-division-container {
+    display: none;
+  }
+
+  .text-name-confirmed {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #ff073a;
+  }
+
+  .text-name-active {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #007bff;
+  }
+
+  .text-name-recovered {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #28a745;
+  }
+
+  .text-name-deceased {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #6c757d;
+  }
+
+  .values-text-confirmed {
+    color: #ff073a;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .values-text-active {
+    color: #007bff;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .values-text-recovered {
+    color: #28a745;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .values-text-deceased {
+    color: #6c757d;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .image-covid {
+    height: 38px;
+    width: 38px;
+  }
 }
 
-.text-name-confirmed {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: #ff073a;
-}
+@media (max-width: 768px) {
+  .list-container-element {
+    list-style-type: none;
+    width: 85vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-division-container {
+    display: flex;
+    flex-direction: row;
+  }
 
-.text-name-active {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: #007bff;
-}
+  .text-name-confirmed {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ff073a;
+  }
 
-.text-name-recovered {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: #28a745;
-}
+  .list-elements-mobile {
+    width: 40vw;
+    column-width: 40vw;
+  }
 
-.text-name-deceased {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: #6c757d;
-}
+  .text-name-active {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #007bff;
+  }
 
-.values-text-confirmed {
-  color: #ff073a;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-}
+  .text-name-recovered {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
 
-.values-text-active {
-  color: #007bff;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-}
-.values-text-recovered {
-  color: #28a745;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-}
-.values-text-deceased {
-  color: #6c757d;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-}
+    color: #28a745;
+  }
 
-.image-covid {
-  height: 38px;
-  width: 38px;
+  .text-name-deceased {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #6c757d;
+  }
+
+  .values-text-confirmed {
+    color: #ff073a;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .values-text-active {
+    color: #007bff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .values-text-recovered {
+    color: #28a745;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .values-text-deceased {
+    color: #6c757d;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .image-covid {
+    height: 24px;
+    width: 24px;
+  }
 }

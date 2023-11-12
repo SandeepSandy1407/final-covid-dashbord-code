@@ -60,3 +60,74 @@
   text-align: right;
   align-self: center;
 }
+
+@media (max-width: 768px) {
+  .list-items-container {
+    font-family: Roboto;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    margin-left: 0px;
+    width: 200vw;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .list-state-name {
+    color: #f1f5f9;
+    text-decoration: none;
+    width: 50vw;
+    align-self: center;
+    padding-right: 20px;
+  }
+
+  .list-confirmed {
+    color: #ff073a;
+    text-decoration: none;
+    width: 40vw;
+    text-align: right;
+    align-self: center;
+  }
+
+  .list-active {
+    color: #007bff;
+    text-decoration: none;
+    width: 40vw;
+    text-align: right;
+    align-self: center;
+  }
+
+  .list-recovered {
+    color: #28a745;
+    text-decoration: none;
+    width: 40vw;
+    text-align: right;
+    align-self: center;
+  }
+
+  .list-deceased {
+    color: #6c757d;
+    text-decoration: none;
+    width: 40vw;
+    text-align: right;
+    align-self: center;
+  }
+
+  .list-population {
+    color: #94a3b8;
+    text-decoration: none;
+    width: 40vw;
+    text-align: right;
+    align-self: center;
+  }
+}

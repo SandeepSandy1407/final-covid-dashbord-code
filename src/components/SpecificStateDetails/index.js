@@ -204,6 +204,7 @@ class SpecificStateDetails extends Component {
     allData: [],
     graphData: [],
     barData: [],
+    timelineLoader: true,
   }
 
   componentDidMount() {
@@ -386,7 +387,7 @@ class SpecificStateDetails extends Component {
   }
 
   getStateDetails = async () => {
-    this.setState({currentApiState: apiState.loading})
+    this.setState({currentApiState: apiState.loading, timelineLoader: true})
     const {match} = this.props
     const {params} = match
     const {stateCode} = params
@@ -450,10 +451,43 @@ class SpecificStateDetails extends Component {
         districtData: temData[0].districtData,
         totalTested: tested,
         allData: temData,
+        timelineLoader: false,
       })
     } else {
       this.setState({currentApiState: apiState.fail})
     }
+  }
+
+  graphDataTimeline = () => {
+    const {totalTested, districtData, activeTab, allData} = this.state
+    const {match} = this.props
+    const {params} = match
+    const {stateCode} = params
+    const stateDetails = statesList.find(
+      eachItem => eachItem.state_code === stateCode,
+    )
+    districtData.sort((a, b) => b[activeTab] - a[activeTab])
+    const stateName = stateDetails.state_name
+    const districtDataSort = districtData.sort(districtData.confirmed)
+    const confirmedLineGraph = this.renderLineChart('confirmed')
+    const activeLineGraph = this.renderLineChart('active')
+    const recoveredLineGraph = this.renderLineChart('recovered')
+    const deceasedLineGraph = this.renderLineChart('deceased')
+    const finalBarGraph = this.renderBarChart(activeTab)
+    const testedBarLineGraph = this.renderLineChart('tested')
+    return (
+      <>
+        <div className="bar-graph-container">{finalBarGraph}</div>
+        <h1 className="daily-spread-head">Daily Spread Trends</h1>
+        <div>
+          <div>{confirmedLineGraph}</div>
+          <div>{activeLineGraph}</div>
+          <div>{recoveredLineGraph}</div>
+          <div>{deceasedLineGraph}</div>
+          <div>{testedBarLineGraph}</div>
+        </div>
+      </>
+    )
   }
 
   changeTab = name => {
@@ -463,10 +497,16 @@ class SpecificStateDetails extends Component {
   loadingComponent = () => (
     <>
       <Header />
-      <div
-        className="products-loader-container"
-        data-testid="stateDetailsLoader"
-      >
+      <div className="products-loader-container">
+        <Loader type="TailSpin" color="#007BFF" height="80" width="80" />
+      </div>
+    </>
+  )
+
+  timelineLoadingComponent = () => (
+    <>
+      <Header />
+      <div className="products-loader">
         <Loader type="TailSpin" color="#007BFF" height="80" width="80" />
       </div>
     </>
@@ -495,7 +535,13 @@ class SpecificStateDetails extends Component {
   )
 
   runningApiComponent = () => {
-    const {totalTested, districtData, activeTab, allData} = this.state
+    const {
+      totalTested,
+      districtData,
+      activeTab,
+      allData,
+      timelineLoader,
+    } = this.state
     const {match} = this.props
     const {params} = match
     const {stateCode} = params
@@ -511,7 +557,9 @@ class SpecificStateDetails extends Component {
     const deceasedLineGraph = this.renderLineChart('deceased')
     const finalBarGraph = this.renderBarChart(activeTab)
     const testedBarLineGraph = this.renderLineChart('tested')
-
+    const finalgraphContent = timelineLoader
+      ? this.timelineLoadingComponent()
+      : this.graphDataTimeline()
     return (
       <>
         <Header />
@@ -539,23 +587,17 @@ class SpecificStateDetails extends Component {
               />
             ))}
           </ul>
-          <ul className="district-container">
-            {districtDataSort.map(eachItem => (
+          <h1>Top Districts</h1>
+          <ul testid="topDistrictsUnorderedList" className="district-container">
+          
+            { districtDataSort.map(eachItem => (
               <li key={eachItem.name} className="district-list-container">
                 <p className="district-count">{eachItem[activeTab]}</p>
                 <p className="district-name">{eachItem.name}</p>
               </li>
             ))}
           </ul>
-          <div className="bar-graph-container">{finalBarGraph}</div>
-          <h1 className="daily-spread-head">Daily Spread Trends</h1>
-          <div data-testid="lineChartsContainer">
-            <div>{confirmedLineGraph}</div>
-            <div>{activeLineGraph}</div>
-            <div>{recoveredLineGraph}</div>
-            <div>{deceasedLineGraph}</div>
-            <div>{testedBarLineGraph}</div>
-          </div>
+          <div>{finalgraphContent}</div>
         </div>
         <Footer />
       </>

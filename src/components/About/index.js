@@ -3,6 +3,7 @@ import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import './index.css'
 
 const apiState = {
   loading: 'LOADING',
@@ -34,11 +35,6 @@ class About extends Component {
     }
   }
 
-  returnToHome = () => {
-    const {history} = this.props
-    history.replace('/')
-  }
-
   runningCurrentApi = () => {
     const {faqs} = this.state
     return (
@@ -46,7 +42,14 @@ class About extends Component {
         <Header />
         <div>
           <h1>About</h1>
-          <ul data-testid="faqsUnorderedList">
+          <p className="about-para-element">Last update on march 28th 2021.</p>
+          <p className="about-para-element2">
+            COVID-19 vaccines be ready for distribution
+          </p>
+          <ul
+            testid="faqsUnorderedList"
+            className="about-unorderlist-container1"
+          >
             {faqs.map(eachItem => (
               <li key={eachItem.qno}>
                 <p>{eachItem.question}</p>
@@ -83,12 +86,12 @@ class About extends Component {
   )
 
   loadingComponent = () => (
-    <>
+    <div testid="aboutRouteLoader">
       <Header />
       <div className="products-loader-container">
         <Loader type="TailSpin" color="#0b69ff" height="50" width="50" />
       </div>
-    </>
+    </div>
   )
 
   render() {

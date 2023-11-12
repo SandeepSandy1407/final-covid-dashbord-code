@@ -193,7 +193,19 @@ class Home extends Component {
   }
 
   changeSearchElement = event => {
-    this.setState({searchElement: event.target.value, suggestionBox: true})
+    this.setState(
+      {searchElement: event.target.value},
+      this.suggestionBoxStatusChanger(),
+    )
+  }
+
+  suggestionBoxStatusChanger = () => {
+    const {searchElement} = this.state
+    if (searchElement.length > 0) {
+      this.setState({suggestionBox: true})
+    } else {
+      this.setState({suggestionBox: false})
+    }
   }
 
   sortNamesDescending = () => {
@@ -229,17 +241,14 @@ class Home extends Component {
   }
 
   runningApiComponent = () => {
-    const {data, searchElement, suggestionList, suggestionBox} = this.state
+    const {data, searchElement, suggestionBox} = this.state
     const searchInput = searchElement.toLowerCase()
     const dataTorender = data.filter(eachItem => {
       const temInp = eachItem.name.toLowerCase()
       return temInp.includes(searchInput)
     })
     const suggestBoxContainer = suggestionBox ? (
-      <ul
-        className="suggestion-main-container1"
-        data-testid="searchResultsUnorderedList"
-      >
+      <ul className="suggestion-main-container1">
         {dataTorender.map(eachItem => (
           <SuggestionBoxSearchElements
             key={eachItem.stateCode}
@@ -266,21 +275,17 @@ class Home extends Component {
                 className="searchElement"
               />
             </div>
-            {suggestBoxContainer}
           </div>
+          {suggestBoxContainer}
           <TotalStatistics data={data} />
-          <ul className="list-container" data-testid="stateWiseCovidDataTable">
-            <li className="list-elements">
-              <div
-                className="sortIcon-para"
-                data-testid="stateWiseCovidDataTable"
-              >
-                <p>State</p>
+          <div className="list-container">
+            <div className="list-elements list-elements-mobile">
+              <div className="sortIcon-para">
+                <p>States/UT</p>
                 <button
                   type="button"
                   onClick={this.sortNamesAscending}
                   className="sortButtonIcon"
-                  data-testid="ascendingSort"
                 >
                   <FcGenericSortingAsc className="sortIcons" />
                 </button>
@@ -288,7 +293,6 @@ class Home extends Component {
                   type="button"
                   onClick={this.sortNamesDescending}
                   className="sortButtonIcon"
-                  data-testid="descendingSort"
                 >
                   <FcGenericSortingDesc className="sortIcons" />
                 </button>
@@ -298,14 +302,16 @@ class Home extends Component {
               <p className="recovered">Recovered</p>
               <p className="deceased">Deceased</p>
               <p className="population">Population</p>
-            </li>
-            {data.map(eachItem => (
-              <StateWiseStatistics
-                key={eachItem.stateCode}
-                fetchedData={eachItem}
-              />
-            ))}
-          </ul>
+            </div>
+            <ul className="list-container">
+              {data.map(eachItem => (
+                <StateWiseStatistics
+                  key={eachItem.stateCode}
+                  fetchedData={eachItem}
+                />
+              ))}
+            </ul>
+          </div>
         </div>
         <Footer />
       </>
@@ -335,9 +341,9 @@ class Home extends Component {
   )
 
   loadingComponent = () => (
-    <div data-test-id="homeRouteLoader">
+    <div>
       <Header />
-      <div className="products-loader-container" data-testid="homeRouteLoader">
+      <div testid="homeRouteLoader" className="products-loader-container">
         <Loader type="TailSpin" color="#007BFF" height="80" width="80" />
       </div>
     </div>
