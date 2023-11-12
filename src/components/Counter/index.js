@@ -24,7 +24,7 @@ class Home extends Component {
   }
 
   startFetchingData = async () => {
-    this.setState({currentApiState: apiState.success})
+    this.setState({currentApiState: apiState.loading})
     const url = 'https://apis.ccbp.in/covid19-state-wise-data'
     const response = await fetch(url)
     if (response.ok) {
